@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+    a {
+        text-decoration: none;
+    }
+
     table,
     th,
     td {
@@ -57,6 +61,8 @@ else{
 //Cerrar la conexion
 $conn->close();
 ?>
+    <br><br>
+    <button><a href="paginaControl.html">VOLVER AL PANEL DE CONTROL</a></button>
 </body>
 
 </html>

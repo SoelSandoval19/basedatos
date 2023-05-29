@@ -1,4 +1,16 @@
-<?php
+<html>
+
+<head>
+    <title>buscar y modificar presentacion </title>
+    <style>
+    a {
+        text-decoration: none;
+    }
+    </style>
+</head>
+
+<body>
+    <?php
 $servername="localhost";
 $username="root";
 $password="";
@@ -22,14 +34,14 @@ if($resultado->num_rows>0){
     //Mostar el formulario de modificacion con los datos del registro encontrado
     $row =$resultado->fetch_assoc();
     ?>
-<form action="Modificar_presentacion.php" method="Post">
-    <label for="codigo">Codigo de la presentacion del producto</label>
-    <input type="number" id="codigo" name="codigo" value="<?php echo $row['id'];?>" readonly><br><br>
-    <label for="nombre">Presentacion del producto</label>
-    <input type="text" id="nombre" name="nombre" value="<?php echo $row['nombre_presentacion'];?>"><br><br>
-    <input type="submit" value="Modificar">
-</form>
-<?php
+    <form action="Modificar_presentacion.php" method="Post">
+        <label for="codigo">Codigo de la presentacion del producto</label>
+        <input type="number" id="codigo" name="codigo" value="<?php echo $row['id'];?>" readonly><br><br>
+        <label for="nombre">Presentacion del producto</label>
+        <input type="text" id="nombre" name="nombre" value="<?php echo $row['nombre_presentacion'];?>"><br><br>
+        <input type="submit" value="Modificar">
+    </form>
+    <?php
 }else{
     echo "No se encontro ningun registro con ese codigo";
 }
@@ -37,3 +49,8 @@ if($resultado->num_rows>0){
 //Cerrar la conexion
 $conn->close();
 ?>
+    <br><br>
+    <button><a href="buscar_modificar_presentacion.html">Volver atras </a></button>
+</body>
+
+</html>

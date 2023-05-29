@@ -1,4 +1,16 @@
-<?php
+<html>
+
+<head>
+    <title>Insertar presentacion</title>
+    <style>
+    a {
+        text-decoration: none;
+    }
+    </style>
+</head>
+
+<body>
+    <?php
 $servername ="localhost";
 $username="root";
 $password="";
@@ -27,3 +39,10 @@ else{
 //Cerrar la conexion
 $conn-> close();
 ?>
+    <br><br>
+    <button><a href="insertarPresentacion.html">Volver a ingresar datos</a></button><br><br>
+    <button><a href="SelectPresentacion.php">Ver tabla modificada</a></button><br><br>
+    <button><a href="paginaControl.html">VOLVER AL PANEL DE CONTROL</a></button> <br><br>
+</body>
+
+</html>

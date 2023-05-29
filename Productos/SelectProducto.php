@@ -18,6 +18,10 @@
     td {
         padding: 10px;
     }
+
+    a {
+        text-decoration: none;
+    }
     </style>
 </head>
 
@@ -61,6 +65,9 @@
 
     // Cerrar la conexion
     $conn->close();
-    ?></body>
+    ?>
+    <br><br><br>
+    <button><a href="paginaControl.html">VOLVER A PANEL DE CONTROL</a></button><br><br>
+</body>
 
 </html>

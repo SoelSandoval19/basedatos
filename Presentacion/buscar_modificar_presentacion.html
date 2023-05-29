@@ -1,13 +1,21 @@
 <html>
   <head>
     <title>Buscar y modificar presentacion</title>
+    <style>
+      a {
+        text-decoration: none;
+      }
+    </style>
   </head>
   <body>
     <h2>Buscar y modificar presentacion de un producto</h2>
     <form action="Buscar_modificar_presentacion.php" method="Post">
       <label for="Codigo">Codigo de la presentacion del producto</label>
       <input type="number" name="codigo" id="codigo" />
-      <input type="submit" value="Buscar" />
+      <input type="submit" value="Buscar" /><br /><br />
+      <button>
+        <a href="paginaControl.html">VOLVER AL PANEL DE CONTROL</a>
+      </button>
     </form>
   </body>
 </html>

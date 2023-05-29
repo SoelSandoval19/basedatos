@@ -1,15 +1,23 @@
 <html>
   <head>
     <title>Eliminar presentacion del producto</title>
+    <style>
+      a {
+        text-decoration: none;
+      }
+    </style>
   </head>
   <body>
     <h2>Eliminar la presentacion del producto</h2>
-    <form action="Eliminar_categoria.php" method="Post">
+    <form action="Eliminar_presentacion.php" method="Post">
       <label for="codigo"
         >Codigo de la presentacion del producto a eliminar</label
       >
-      <input type="numbet" name="codigo" id="codigo" />
-      <input type="submit" value="Eliminar" />
+      <input type="numbet" name="codigo" id="codigo" /><br /><br />
+      <input type="submit" value="Eliminar" /><br /><br />
+      <button>
+        <a href="paginaControl.html">VOLVER AL PANEL DE CONTROL</a><br /><br />
+      </button>
     </form>
   </body>
 </html>

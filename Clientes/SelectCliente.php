@@ -26,7 +26,7 @@
 $serername="localHost";
 $username="root";
 $password="";
-$dbname="farnacia";
+$dbname="farmacia";
 
 //Crear la conexion
 $conn= new mysqli($serername,$username,$password,$dbname);
@@ -50,7 +50,7 @@ while($fila=$resultado->fetch_assoc()){
 //Cerrar tabla
 echo '</table';
 }else{
-    echo '</table>';
+    echo "No se encontraron resultados";
 }
 $conn->close();
 ?>

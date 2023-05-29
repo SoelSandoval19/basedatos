@@ -1,4 +1,16 @@
-<?php
+<html>
+
+<head>
+    <title>Eliminar la categoria</title>
+    <style>
+    a {
+        text-decoration: none;
+    }
+    </style>
+</head>
+
+<body>
+    <?php
 $servername="localHost";
 $username="root";
 $password="";
@@ -26,3 +38,10 @@ if($conn->query($sql)===true){
 //Cerrar la conexion 
 $conn->close();
 ?>
+    <br><br>
+    <button type="button"><a href="eliminarPresentacion.html">Volver a eliminar dato </a></button> <br><br>
+    <button><a href="SelectPresentacion.php">Ver tabla modificada</a></button><br><br>
+    <button><a href="paginaControl.html">VOLVER AL PANEL DE CONTROL</a></button>
+</body>
+
+</html>

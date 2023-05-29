@@ -1,4 +1,16 @@
-<?php
+<html>
+
+<head>
+    <title>Modificar presentacion </title>
+</head>
+<style>
+a {
+    text-decoration: none;
+}
+</style>
+
+<body>
+    <?php
 $servername="localhost";
 $username="root";
 $password="";
@@ -27,3 +39,10 @@ if($conn->query($sql)===true){
 //Cerrar la conexion
 $conn->close();
 ?>
+    <br><br>
+    <button><a href="buscar_modificar_presentacion.html">Volver a modificar dato</a></button></br><br>
+    <button><a href="SelectPresentacion.php">Ver tabla modificada.php</a></button><br><br>
+    <button><a href="paginaControl.html">VOLVER AL PANEL DE CONTROL</a></button>
+</body>
+
+</html>

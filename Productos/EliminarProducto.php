@@ -1,4 +1,20 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    a {
+        text-decoration: none;
+    }
+    </style>
+</head>
+
+<body>
+    <?php
 $servername="localhost";
 $username="root";
 $password="";
@@ -14,11 +30,8 @@ if($conn->connect_error){
 
 //Obtener el codigo del producto a eliminar desde el formulario
 $codigo=$_POST['codigo'];
-$nombre=$_POST['nombre'];
-
 //Crear la consulta SQL para eliminar el producto correspondiente
 $sql="DELETE FROM producto WHERE cod='$codigo'";
-$sql="DELETE FROM producto WHERE nombre='$nombre'";
 if($conn->query($sql)===true){
     echo 'El registro se elimino correctamente';
 }else{
@@ -28,3 +41,10 @@ if($conn->query($sql)===true){
 //Cerrar la conexion
 $conn->close();
 ?>
+    <br><br><br>
+    <button><a href="eliminar.html">Volver a eliminar otro dato</a></button><br><br>
+    <button><a href="SelectProducto.php">Ver tabla modificada</a></button><br><br>
+    <button><a href="paginaControl.html">VOLVER AL PANEL DE CONTROL </a></button><br>
+</body>
+
+</html>

@@ -1,4 +1,20 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    a {
+        text-decoration: none;
+    }
+    </style>
+</head>
+
+<body>
+    <?php
 $servername="localhost";
 $username="root";
 $password="";
@@ -22,12 +38,8 @@ $fecha=$_POST['fecha'];
 $controlado=$_POST['controlado'];
 
 //Crear consulta SQL para modificar producto correspondiente
-$sql="UPDATE producto SET nombre='$nombre',";
-$sql="UPDATE producto SET precio='$precio'";
-$sql="UPDATE producto SET cantidadStock='$stock'";
-$sql="UPDATE producto SET nroLote='fecha'";
-$sql="UPDATE producto SET fecha_vencimiento='$fecha'";
-$sql="UPDATE producto SET controlado='$controlado'";
+$sql="UPDATE producto SET nombre='$nombre',precio ='$precio',cantidadStock ='$stock', 
+nroLote='$lote',fecha_vencimiento='$fecha',controlado='$controlado' WHERE cod='$codigo'";
 if($conn->query($sql)===true){
     echo 'El registro se modifico correctamente';
 }else{
@@ -37,3 +49,10 @@ if($conn->query($sql)===true){
 //Cerrar la conexion 
 $conn->close();
 ?>
+    <br><br><br>
+    <button><a href="buscar_modificar_producto.html">Volver a modificar otro producto</a></button><br><br><br>
+    <button><a href="SelectProducto.php">Ver tabla modificada</a></button><br><br><br>
+    <button><a href="paginaControl.html">VOLVER AL PANEL DE CONTROL</a></button><br>
+</body>
+
+</html>
